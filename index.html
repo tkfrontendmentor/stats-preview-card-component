@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap');
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root {
+      ---very-dark-blue: hsl(233, 47%, 7%);
+      ---dark-desaturated-blue:  hsl(244, 38%, 16%);
+      ---soft-violet: hsl(277, 64%, 61%);
+      ---soft-violet-opac: hsla(277, 64%, 61%, .4);
+    /*  Neutral Colors */
+      ---white-color:  hsl(0, 0%, 100%);
+      ---transparent-white: hsla(0, 0%, 100%, 0.75);
+      ---transparent-white2: hsla(0, 0%, 100%, 0.6);
+    }
+    body {
+      font-size: 15px;
+      font-family: 'Lexend Deca',sans-serif;
+      background-color: var(---very-dark-blue);
+    }
+
+    h1,h2,h3 {
+      color: var(---transparent-white);
+    }
+
+    h1 span {
+      color: var(---soft-violet);
+    }
+
+    p {
+      color: var(---transparent-white2);
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1080px;
+      margin: 50px auto;
+    }
+
+    .insights {
+      background-color: var(---dark-desaturated-blue);
+    }
+
+    .insights img {
+      z-index: -1;
+    }
+    .wrap {
+      position:relative;
+    }
+
+    .wrap:before {
+      content:"";
+      position: absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+      background: var(---soft-violet-opac);
+      z-index:999;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex: 100%;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 750px) {
+      .container {
+        display: flex;
+        max-width: 375px;
+        flex-direction: column-reverse;
+        margin: 50px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column insights">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.</p>
+        <div class="stats">
+          <div>
+            <h2>10k+</h2>
+            <p>companies</p>
+          </div>
+          <div>
+            <h2>314</h2>
+            <p> templates</p>
+          </div>
+          <div>
+            <h2>12m+</h2>
+            <p>queries</p>
+          </div>
+        </div>
+    </div>
+    <div class="column wrap">
+      <img src="images/image-header-desktop.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
